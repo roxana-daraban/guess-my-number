@@ -26,7 +26,16 @@ if(!guess){
     document.querySelector('.highscore').textContent=highscore;
   }
   
-
+//when the guess is too high
+}else if(guess>secretNumber){
+  if(score>1){
+    document.querySelector('.message').textContent='Too high!';
+    score--;
+    document.querySelector('.score').textContent=score;
+  }else{
+    document.querySelector('.message').textContent='You lost the game';
+    document.querySelector('.score').textContent=0;
+  }
 }
 })
 
